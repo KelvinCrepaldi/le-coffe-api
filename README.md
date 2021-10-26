@@ -1,7 +1,8 @@
 <h1 align="center">Hot Wheels collection API</h1>
 
 <h5>URL base para as requisições:</h5>
-<a href="https://hw-collection-api.herokuapp.com">https://hw-collection-api.herokuapp.com</a>
+<a href="https://hw-collection-api.herokuapp.com">https://hw-collection-api.herokuapp.com</a></br>
+<a href="https://hw-collection-api.herokuapp.com/users?_embed=userCars">Lista de usuários</a></br>
 </br>
 Essa API tem o intuito de que seus usuários cadastrem cada carro de sua coleção com dados como nome e ano de lançamento do modelo
 
@@ -66,26 +67,33 @@ Já este endpoint fará o login do usuário, os dados necessários para o login 
 ```json
 [
   {
-    "email": "newuser@mail.com",
-    "password": "$2a$10$wy10V8dsaeMw/giBaD4WH.y9RzC/ugvHwWhipWAJ1XHj/IfU4onz6",
-    "username": "NewOne",
+    "email": "olie@mail.com",
+    "password": "$2a$10$OJwEsBRlbiTJwO6vyEidE.2tqIPTgJitOWAx8BSHquGike/bp2vg.",
+    "name": "olie",
     "id": 1,
     "userCars": [
       {
-        "name": "firstcar",
-        "year": "1999",
-        "quantity": "2",
+        "name": "Datsun 240z",
+        "year": "2006",
         "userId": 1,
-        "id": 1
+        "id": 3
       }
     ]
   },
   {
-    "email": "olie@mail.com",
-    "password": "$2a$10$WiNl.4ArWndExwePnc9IquDXmsm9ZwPJDzNFjHdAUi0/nXnDtlCwS",
-    "username": "olie",
+    "email": "jenny@mail.com",
+    "password": "$2a$10$0KowRBxMnOot8I4l9grJeetncK7pZuf7KZVZn9bXuUTZ.F4Mx4Pqy",
+    "name": "jenny",
     "id": 2,
-    "userCars": []
+    "userCars": [
+      {
+        "name": "70 RoadRunner",
+        "year": "1998",
+        "quantity": 1,
+        "userId": 2,
+        "id": 1
+      }
+    ]
   }
 ]
 ```
