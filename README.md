@@ -18,4 +18,23 @@ Este endpoint irá cadastrar o usuário na lista de "Users", com campos obrigat�
 
 >POST baseURL/signin
 
-Já este endpoint fará o login do usuário, os dados necessários para o login são o email e a senha cadas tradas no endpoint anterior.
+Já este endpoint fará o login do usuário, os dados necessários para o login são o email e a senha cadas tradas no endpoint anterior, como se pode ver no exemplo a seguir:
+
+<b>Enviado o segintes dados</b></br>
+```json
+{
+  "email": "newuser@mail.com",
+  "password": "strongPassword"
+}
+```
+<b>iremos ter como resposta:</b></br>
+```json
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im5ld3VzZXJAbWFpbC5jb20iLCJpYXQiOjE2MzUyNjg0MzMsImV4cCI6MTYzNTI3MjAzMywic3ViIjoiMiJ9.fD52Jmf80FJLjRFW3QMB5Cl3InQbDthcyGPVAOeDP2I",
+  "user": {
+    "email": "newuser@mail.com",
+    "username": "NewOne",
+    "id": 2
+  }
+}
+```
