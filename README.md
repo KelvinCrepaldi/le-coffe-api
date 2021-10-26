@@ -1,5 +1,8 @@
 <h1 align="center">Hot Wheels collection API</h1>
 
+<h5>URL base para as requisições:</h5>
+<a href="https://hw-collection-api.herokuapp.com">https://hw-collection-api.herokuapp.com</a>
+</br>
 Essa API tem o intuito de que seus usuários cadastrem cada carro de sua coleção com dados como nome e ano de lançamento do modelo
 
 ## Endpoints
