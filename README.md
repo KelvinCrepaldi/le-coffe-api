@@ -1,4 +1,4 @@
-<h1 align="center">HotWeels collection API</h1>
+<h1 align="center">HotWheels collection API</h1>
 
 Essa API tem o intuito de que seus usuários cadastrem cada carro de sua coleção com dados como nome e ano de lançamento do modelo
 
@@ -34,7 +34,62 @@ Já este endpoint fará o login do usuário, os dados necessários para o login 
   "user": {
     "email": "newuser@mail.com",
     "username": "NewOne",
-    "id": 2
+    "id": 1
   }
+}
+```
+<h2 align="center">Listando usuários:</h2>
+
+>GET baseURL/users
+
+É possível ver a lista de usuários da api e suas respectivas listas de carrinhos sem nehuma barreira de autenticação:
+
+<b>Exemplo de resposta:</b>
+```json
+[
+  {
+    "email": "newuser@mail.com",
+    "password": "$2a$10$wy10V8dsaeMw/giBaD4WH.y9RzC/ugvHwWhipWAJ1XHj/IfU4onz6",
+    "username": "NewOne",
+    "id": 2,
+    "userCars": []
+  },
+  {
+    "email": "olie@mail.com",
+    "password": "$2a$10$WiNl.4ArWndExwePnc9IquDXmsm9ZwPJDzNFjHdAUi0/nXnDtlCwS",
+    "username": "olie",
+    "id": 3,
+    "userCars": [
+      {
+        "name": "firstcar",
+        "year": "1999",
+        "userId": 3,
+        "id": 1
+      }
+    ]
+  }
+]
+```
+<h2 align="center">Adicionando carrinhos:</h2>
+
+Para adicionar novos carros a coleção de um usuário, é necessario os dados de nome do modelo, ano de lançamento, e a quantidade de modelos, caso o usuário tenha mais de um. 
+
+ALem disso todas os endpoits ralacionados as minituras necessitam de um token de autenticação.
+
+> Headers: { Authorization: "Bearer + {token}" }
+
+### Adicionando
+
+>POST baseURL/userCars
+
+Junto com os dados do modelo também é necessesário o id do usuário para relacionar o item ao dono
+
+<b>Exemplo:</b>
+```json
+{
+    "name": "firstcar",
+	"year": "1999",
+    "quantity": "2",
+	"userId": 1
 }
 ```
