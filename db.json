@@ -11,8 +11,14 @@
       "password": "$2a$10$0KowRBxMnOot8I4l9grJeetncK7pZuf7KZVZn9bXuUTZ.F4Mx4Pqy",
       "name": "jenny",
       "id": 2
+    },
+    {
+      "email": "newUser@mail.com",
+      "password": "$2a$10$0VtXSMXzYP3UkiUH0EWrOOsbpOD1u5OvafyndE1fLB5rbTF87qfLG",
+      "username": "NewOne",
+      "id": 3
     }
   ],
   "userCart": [],
-  "hamburgers": []
+  "products": []
 }
