@@ -1,7 +1,7 @@
 {
   "users": [
     {
-      "email": "olie@mail.com",
+      "email": "olie2@mail.com",
       "password": "$2a$10$OJwEsBRlbiTJwO6vyEidE.2tqIPTgJitOWAx8BSHquGike/bp2vg.",
       "name": "olie",
       "id": 1
@@ -13,17 +13,6 @@
       "id": 2
     }
   ],
-  "userCars": [{
-    "name": "70 RoadRunner",
-    "year": "1998",
-    "quantity": 1,
-    "userId": 2,
-    "id": 1
-  },
-  {
-    "name": "Datsun 240z",
-    "year": "2006",
-    "userId": 1,
-    "id": 3
-  }]
+  "userCart": [],
+  "hamburgers": []
 }
