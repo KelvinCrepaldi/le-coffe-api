@@ -19,49 +19,50 @@
       "id": 3
     }
   ],
-  "userCart": [],
+  "userCart": [
+    {
+      "id": 1,
+      "userId": 1,
+      "productsId": 1,
+      "sample": true
+    }
+  ],
   "products": [
     {
       "id": 1,
-      "name": "Hamburguer",
-      "category": "Sanduíches",
-      "price": 7.99
+      "name": "Caffezero",
+      "category": "Moido",
+      "price": 29.99,
+      "description": "Café moido por moinhos de vento de Minas Gerais",
+      "sca": 80
     },
     {
       "id": 2,
-      "name": "X-Burguer",
-      "category": "Sanduíches",
-      "price": 8.99
+      "name": "Kopi Luwak",
+      "category": "Grão",
+      "price": 150.99,
+      "description": "Café exótico oriundo do sul e sudeste da Ásia",
+      "sca": 55
+    }
+  ],
+  "productsRating": [
+    {
+      "userId": 1,
+      "productsId": 1,
+      "text": "Muito bom esse café, nota 10",
+      "rating": 5
     },
     {
-      "id": 3,
-      "name": "X-Salada",
-      "category": "Sanduíches",
-      "price": 10.99
+      "userId": 2,
+      "productsId": 1,
+      "text": "Não gostei muito, amargo demais",
+      "rating": 3
     },
     {
-      "id": 4,
-      "name": "Big Kenzie",
-      "category": "Sanduíches",
-      "price": 16.99
-    },
-    {
-      "id": 5,
-      "name": "Guaraná",
-      "category": "Bebidas",
-      "price": 4.99
-    },
-    {
-      "id": 6,
-      "name": "Coca",
-      "category": "Bebidas",
-      "price": 4.99
-    },
-    {
-      "id": 7,
-      "name": "Fanta",
-      "category": "Bebidas",
-      "price": 4.99
+      "userId": 3,
+      "productsId": 2,
+      "text": "Entrega super rapida, e o café muito bom",
+      "rating": 4
     }
   ]
 }
