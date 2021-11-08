@@ -1,10 +1,14 @@
 # Le Coffe API
 
-#Endpoints
+Esse é o repositório com base de JSON-Server + Json-Server-Auth, feita para ser usada no desenvolvimento do projeto Le Coffe, para o Capstone do Q2.
+
+# Endpoints
 
 Existem 3 endpoints que podem ser utilizados para cadastro e 2 para login, de acordo com a documentação do JSON-Server-Auth (https://www.npmjs.com/package/json-server-auth).
 
 Tambem foram criados 4 endpoints que podem ser usados para manipular a base de dados da API, sendo possivel administrar produtos, carrinhos, comentarios e outros.
+
+## Cadastro e Login de Usuário
 
 ### Cadastro
 
@@ -18,7 +22,8 @@ POST /register <br />
 POST /signup <br />
 POST /users <br />
 
-`Exemplo de requisição <br /> POST - https://le-coffe-api.herokuapp.com/signup`
+`Exemplo de requisição`
+`POST - https://le-coffe-api.herokuapp.com/signup`
 
 ```json
 {
@@ -43,12 +48,13 @@ POST /users <br />
 
 ### Login
 
-Qualquer um dessesn 2 endpoins pode ser usado para realizar login com um dos usuários cadastrados da lista de "users"
+Qualquer um desses 2 endpoins pode ser usado para realizar login com um dos usuários cadastrados da lista de "users"
 
 POST /login <br/>
 POST /signin <br/>
 
-`Exemplo de requisição <br /> POST - https://le-coffe-api.herokuapp.com/login`
+`Exemplo de requisição`
+`POST - https://le-coffe-api.herokuapp.com/login`
 
 ```json
 {
@@ -69,3 +75,5 @@ POST /signin <br/>
   }
 }
 ```
+
+## Produtos
