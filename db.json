@@ -7,50 +7,13 @@
       "id": 1
     },
     {
-      "email": "jenny@mail.com",
-      "password": "$2a$10$0KowRBxMnOot8I4l9grJeetncK7pZuf7KZVZn9bXuUTZ.F4Mx4Pqy",
-      "name": "jenny",
-      "id": 2
-    },
-    {
-      "email": "newUser@mail.com",
-      "password": "$2a$10$0VtXSMXzYP3UkiUH0EWrOOsbpOD1u5OvafyndE1fLB5rbTF87qfLG",
-      "username": "NewOne",
-      "id": 3
-    },
-    {
-      "email": "user@mail.com",
-      "password": "$2a$10$P.S0EUlyYTtCIbjbN1stU.ZtP.0YVy5yv9O7Yo/zgBgEYusR35mvK",
-      "name": "User Name",
-      "id": 4
-    },
-    {
       "email": "pinguim@mail.com",
       "password": "$2a$10$DLX45bGoRb4vmF3MlzAQ.Ox5FXwJjqnEYoQQijrgSFxBDGfO.lf/6",
       "name": "pinguim",
-      "id": 5
-    }
-  ],
-  "userCart": [
-    {
-      "id": 1,
-      "userId": 1,
-      "productsId": 1,
-      "sample": true
-    },
-    {
-      "userId": 4,
-      "productsId": 2,
-      "sample": true,
       "id": 2
-    },
-    {
-      "userId": 4,
-      "productsId": 2,
-      "sample": true,
-      "id": 3
     }
   ],
+  "userCart": [],
   "products": [
     {
       "id": 1,
@@ -71,18 +34,32 @@
   ],
   "ratingProducts": [
     {
-      "userId": 4,
+      "userId": 1,
       "productsId": 1,
-      "text": " dsaf dsaf sadf dsafds",
+      "text": " texto de comentario 1",
       "rating": 5,
+      "id": 1
+    },
+    {
+      "userId": 1,
+      "productsId": 2,
+      "text": " texto de comentario 2",
+      "rating": 3,
       "id": 2
     },
     {
-      "userId": 4,
+      "userId": 2,
       "productsId": 1,
-      "text": " dsaf dsaf sadf dsafds",
-      "rating": 5,
+      "text": " texto de comentario 1",
+      "rating": 4,
       "id": 3
+    },
+    {
+      "userId": 2,
+      "productsId": 2,
+      "text": " texto de comentario 2",
+      "rating": 1,
+      "id": 4
     }
   ]
 }

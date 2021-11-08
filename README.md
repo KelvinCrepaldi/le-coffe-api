@@ -6,7 +6,7 @@ Esse é o repositório com base de JSON-Server + Json-Server-Auth, feita para se
 
 Existem 3 endpoints que podem ser utilizados para cadastro e 2 para login, de acordo com a documentação do JSON-Server-Auth (https://www.npmjs.com/package/json-server-auth).
 
-Tambem foram criados 4 endpoints que podem ser usados para manipular a base de dados da API, sendo possivel administrar produtos, carrinhos, comentarios e outros.
+Tambem foram criados 3 endpoints que podem ser usados para manipular a base de dados da API, sendo possivel administrar produtos, carrinhos e avaliações dos produtos.
 
 ## Cadastro e Login de Usuário
 
@@ -22,7 +22,7 @@ POST /register <br />
 POST /signup <br />
 POST /users <br />
 
-`Exemplo de requisição`
+Exemplo de requisição
 `POST - https://le-coffe-api.herokuapp.com/signup`
 
 ```json
@@ -53,7 +53,7 @@ Qualquer um desses 2 endpoins pode ser usado para realizar login com um dos usu�
 POST /login <br/>
 POST /signin <br/>
 
-`Exemplo de requisição`
+Exemplo de requisição:
 `POST - https://le-coffe-api.herokuapp.com/login`
 
 ```json
@@ -78,13 +78,13 @@ POST /signin <br/>
 
 ## Produtos
 
-É possivel acessar a lista de produtos disponíveis
+É possivel ter acesso a lista de produtos disponíveis.
 
 GET /products <br />
 
-### GET products
+### GET /products
 
-`Exemplo de requisição`
+Exemplo de requisição:
 `GET - https://le-coffe-api.herokuapp.com/products`
 
 ```json
@@ -112,14 +112,17 @@ GET /products <br />
 
 É possivel administrar a avaliação dos produtos com pontuação e comentário.
 
-GET /productsRating
-POST /productsRating
-DELETE /productsRating
+GET /ratingProducts <br />
+POST /ratingProducts <br />
+DELETE /ratingProducts <br />
 
-### GET productsRating
+### GET /ratingProducts
 
-`Exemplo de requisição`
-`GET - https://le-coffe-api.herokuapp.com/productsRating`
+Exemplo de requisição:
+
+`GET - https://le-coffe-api.herokuapp.com/ratingProducts`
+
+<br />
 `Resposta - 200 OK`
 
 ```json
@@ -145,9 +148,9 @@ DELETE /productsRating
 ]
 ```
 
-### POST ratingProducts
+### POST /ratingProducts
 
-`Exemplo de requisição`
+Exemplo de requisição:
 `POST - https://le-coffe-api.herokuapp.com/ratingProducts`
 
 ```json
@@ -172,24 +175,123 @@ DELETE /productsRating
 ```
 
 `Possível erro - 403 Forbidden`
-É necessario identificar o Id do usuário que está fazendo a avaliação do produto, caso coloque outro Id ou nenhum a resposta será o erro:
 
 ```json
 "Private resource creation: request body must have a reference to the owner id"
 ```
 
-### DELETE ratingProducts
+É necessario identificar o Id do usuário que está fazendo a avaliação do produto, caso coloque outro Id ou nenhum a API retornará o erro 403.
 
-`Exemplo de requisição`
+### DELETE /ratingProducts
+
+É necessario identificar o Id do recurso no endereço.
+
+Exemplo de requisição:
 `DELETE - https://le-coffe-api.herokuapp.com/ratingProducts/1`
+
+<br />
 
 `Resposta - 200 OK`
 
 <br />
-`Possivel erro - 401 Unauthorized`
 
-O recurso só pode ser deletado se o usuário possuir o mesmo Id do dono do recurso, ou se o recurso existir.
+`Possivel erro - 401 Unauthorized`
 
 ```json
 "Cannot read properties of undefined (reading 'userId')"
 ```
+
+O recurso só pode ser deletado se o usuário possuir o mesmo Id do dono do recurso, ou se o recurso existir.
+
+## Carrinho do usuário
+
+Os usuários podem armazenar a compra em um carrinho de compras, apenas o usuário dono pode ver e modificar o próprio carrinho.
+
+GET /userCart <br />
+POST /userCart <br />
+DELETE /userCart <br />
+
+### GET /userCart
+
+Exemplo de requisição:
+
+`GET - https://le-coffe-api.herokuapp.com/userCart`
+
+<br />
+`Resposta - 200 OK`
+
+```json
+[
+  {
+    "id": 1,
+    "userId": 1,
+    "productsId": 1,
+    "sample": true
+  },
+  {
+    "userId": 4,
+    "productsId": 2,
+    "sample": true,
+    "id": 2
+  },
+  {
+    "userId": 4,
+    "productsId": 2,
+    "sample": true,
+    "id": 3
+  }
+]
+```
+
+### POST /userCart
+
+Exemplo de requisição:
+`POST - https://le-coffe-api.herokuapp.com/userCart`
+
+```json
+{
+  "userId": 4,
+  "productsId": 2,
+  "sample": true
+}
+```
+
+`Resposta - 201 Created`
+
+```json
+{
+  "userId": 4,
+  "productsId": 2,
+  "sample": true,
+  "id": 4
+}
+```
+
+`Possível erro - 403 Forbidden`
+
+```json
+"Private resource creation: request body must have a reference to the owner id"
+```
+
+É necessario identificar o Id do usuário que está fazendo a avaliação do produto, caso coloque outro Id ou nenhum a API retornará o erro 403.
+
+### DELETE /userCart
+
+É necessario identificar o Id do recurso no endereço.
+
+Exemplo de requisição:
+`DELETE - https://le-coffe-api.herokuapp.com/userCart/3`
+
+<br />
+
+`Resposta - 200 OK`
+
+<br />
+
+`Possivel erro - 401 Unauthorized`
+
+```json
+"Cannot read properties of undefined (reading 'userId')"
+```
+
+O recurso só pode ser deletado se o usuário possuir o mesmo Id do dono do recurso, ou se o recurso existir.
