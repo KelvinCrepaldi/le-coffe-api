@@ -1,4 +1,4 @@
-# Le Coffe API
+# Le Coffee API
 
 Esse é o repositório com base de JSON-Server + Json-Server-Auth, feita para ser usada no desenvolvimento do projeto Le Coffe, para o Capstone do Q2.
 
