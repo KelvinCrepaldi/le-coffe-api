@@ -8,6 +8,8 @@ Existem 3 endpoints que podem ser utilizados para cadastro e 2 para login, de ac
 
 Tambem foram criados 3 endpoints que podem ser usados para manipular a base de dados da API, sendo possivel administrar produtos, carrinhos e avaliações dos produtos.
 
+O url base da API é https://le-coffe-api.herokuapp.com/
+
 ## Cadastro e Login de Usuário
 
 ### Cadastro
