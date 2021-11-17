@@ -37,7 +37,19 @@
       "id": 6
     }
   ],
-  "userAdress": [],
+  "userAdress": [
+    {
+      "userId": 2,
+      "city": "Curitiba",
+      "state": "Paraná",
+      "postalCode": 80610905,
+      "Country": "Brasil",
+      "Address": " Av. Pres. Kennedy",
+      "number": "4121",
+      "district": "Portão",
+      "id": 1
+    }
+  ],
   "userCart": [],
   "products": [
     {
