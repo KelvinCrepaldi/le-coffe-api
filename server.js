@@ -14,7 +14,7 @@ const rules = auth.rewriter({
   products: 444,
   ratingProducts: 644,
   regionCoordinates: 444,
-  userAdress: 600,
+  userAdress: 660,
 });
 
 app.use(cors());
