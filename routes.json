@@ -2,5 +2,7 @@
   "users": 644,
   "userCart": 640,
   "products": 444,
-  "ratingProducts": 644
+  "ratingProducts": 644,
+  "regionCoordinates": 444,
+  "userAdress": 600
 }
