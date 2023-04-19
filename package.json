@@ -1,7 +1,25 @@
 {
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
     "json-server": "^0.16.3",
     "json-server-auth": "^2.1.0"
-  }
+  },
+  "scripts": {
+    "start": "json-server --watch db.json"
+  },
+  "name": "le-coffe-api",
+  "description": "Esse é o repositório com base de JSON-Server + Json-Server-Auth, feita para ser usada no desenvolvimento do projeto Le Coffee, para o Capstone do Q2.",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KelvinCrepaldi/le-coffe-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KelvinCrepaldi/le-coffe-api/issues"
+  },
+  "homepage": "https://github.com/KelvinCrepaldi/le-coffe-api#readme"
 }
