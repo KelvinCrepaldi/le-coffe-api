@@ -1,5 +1,3 @@
-import "dotenv/config";
-
 const jsonServer = require("json-server");
 const auth = require("json-server-auth");
 const cors = require("cors");
@@ -30,7 +28,7 @@ app.use(
 app.use(rules);
 app.use(auth);
 app.use(router);
-server.options("*", cors());
+app.options("*", cors());
 app.listen(port);
 
 console.log("Server is running on port:", port);
