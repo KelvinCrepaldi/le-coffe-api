@@ -18,6 +18,11 @@ const rules = auth.rewriter({
 });
 
 app.use(cors());
+server.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'http://localhost:3000')
+  res.header('Access-Control-Allow-Headers', '*')
+  next()
+})
 app.use(rules);
 app.use(auth);
 app.use(router);
