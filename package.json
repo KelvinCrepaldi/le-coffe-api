@@ -6,7 +6,7 @@
     "json-server-auth": "^2.1.0"
   },
   "scripts": {
-    "start": "json-server --watch db.json"
+    "start": "json-server db.json"
   },
   "name": "le-coffe-api",
   "description": "Esse é o repositório com base de JSON-Server + Json-Server-Auth, feita para ser usada no desenvolvimento do projeto Le Coffee, para o Capstone do Q2.",
