@@ -17,15 +17,18 @@ const rules = auth.rewriter({
   userAddress: 660,
 });
 
-app.use(cors());
-app.use((req, res, next) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:3000");
-  res.header("Access-Control-Allow-Headers", "*");
-  next();
-});
+app.use(
+  cors({
+    origin: true,
+    credentials: true,
+    preflightContinue: false,
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  })
+);
 app.use(rules);
 app.use(auth);
 app.use(router);
+server.options("*", cors());
 app.listen(port);
 
 console.log("Server is running on port:", port);
